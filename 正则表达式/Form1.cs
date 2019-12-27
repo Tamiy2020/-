@@ -51,7 +51,7 @@ namespace 正则表达式
         /// <param name="e"></param>
         private void txt_Regex_TextChanged(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(txt_Regex.Text, "^[0-9]{0,6}$"))//纯数字
+            if (!Regex.IsMatch(txt_Regex.Text, @"^\d{0,6}$"))//纯数字
             {
                
                 lbl_Tips.Text = "请输入纯数字密码";
