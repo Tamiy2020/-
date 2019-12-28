@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txt_Regex = new System.Windows.Forms.TextBox();
             this.btn_OK = new System.Windows.Forms.Button();
             this.lbl_Tips = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             // 
             // txt_Regex
             // 
+            this.txt_Regex.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txt_Regex.Location = new System.Drawing.Point(24, 74);
             this.txt_Regex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Regex.MaxLength = 6;
@@ -47,6 +49,7 @@
             // 
             // btn_OK
             // 
+            this.btn_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_OK.Location = new System.Drawing.Point(169, 74);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(75, 23);
@@ -68,18 +71,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(262, 131);
             this.Controls.Add(this.lbl_Tips);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.txt_Regex);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "密码（正则表达式的应用）";
             this.ResumeLayout(false);
             this.PerformLayout();
 
