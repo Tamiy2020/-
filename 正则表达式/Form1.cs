@@ -26,8 +26,7 @@ namespace 正则表达式
         /// <param name="e"></param>
         private void btn_OK_Click(object sender, EventArgs e)
         {
-            string str = txt_Regex.Text;
-            if (str == "190610")
+            if (txt_Regex.Text == "190610")
             {
                 MessageBox.Show("密码输入正确");
                 btn_OK.Focus();
