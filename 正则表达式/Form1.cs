@@ -16,9 +16,8 @@ namespace 正则表达式
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();//初始化
         }
-
 
         /// <summary>
         /// 点击btn_OK按钮
@@ -28,21 +27,16 @@ namespace 正则表达式
         private void btn_OK_Click(object sender, EventArgs e)
         {
             string str = txt_Regex.Text;
-            if (str=="190610")
+            if (str == "190610")
             {
                 MessageBox.Show("密码输入正确");
                 btn_OK.Focus();
                 return;
             }
-            else
-            {
-                MessageBox.Show("密码输入错误");
-                txt_Regex.Clear();
-                txt_Regex.Focus();
-            }
-           
+            MessageBox.Show("密码输入错误");
+            txt_Regex.Clear();
+            txt_Regex.Focus();
         }
-
 
         /// <summary>
         /// txt_Regex输入提示
@@ -51,25 +45,24 @@ namespace 正则表达式
         /// <param name="e"></param>
         private void txt_Regex_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(txt_Regex.Text, @"\D"))
+            if (Regex.IsMatch(txt_Regex.Text, @"\D")) //正则表达式匹配（文本框txt_Regex为任意非数字返回true）
             {
-               
                 lbl_Tips.Text = "请输入纯数字密码";
                 return;
             }
-            lbl_Tips.Text = "";
+            lbl_Tips.Text =string.Empty;
         }
 
         /// <summary>
-        /// 按下ENTER 键触发btn_OK事件
+        /// 按下ENTER 键触发btn_OK_Click事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e.KeyValue =13"></param>
         private void txt_Regex_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue ==13)//ENTER 键
+            if (e.KeyValue == 13)//ENTER 键
             {
-                btn_OK.PerformClick();//触发btn_OK事件
+                btn_OK.PerformClick();//触发btn_OK_Click事件
             }
         }
     }
