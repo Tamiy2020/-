@@ -25,6 +25,9 @@ namespace 一些方法
             lbl2.Text = "Application.StartupPath" + "               " + Application.StartupPath;
             lbl3.Text = "AppDomain.CurrentDomain.BaseDirectory" + "    " + AppDomain.CurrentDomain.BaseDirectory;
             lbl4.Text = "Assembly.GetExecutingAssembly().Location" + "   " + Assembly.GetExecutingAssembly().Location;
+            Random r = new Random();
+            int x = r.Next(100000, 1000000);//不包括maxValue
+            lbl5.Text = "生成六位的随机数：" + x.ToString();
         }
     }
 }

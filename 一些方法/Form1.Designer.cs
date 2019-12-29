@@ -33,6 +33,7 @@
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
+            this.lbl5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl1
@@ -49,7 +50,7 @@
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbl2.Location = new System.Drawing.Point(2, 58);
+            this.lbl2.Location = new System.Drawing.Point(2, 56);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(43, 17);
             this.lbl2.TabIndex = 1;
@@ -58,7 +59,7 @@
             // lbl3
             // 
             this.lbl3.AutoSize = true;
-            this.lbl3.Location = new System.Drawing.Point(2, 98);
+            this.lbl3.Location = new System.Drawing.Point(2, 94);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(43, 17);
             this.lbl3.TabIndex = 2;
@@ -67,17 +68,28 @@
             // lbl4
             // 
             this.lbl4.AutoSize = true;
-            this.lbl4.Location = new System.Drawing.Point(2, 138);
+            this.lbl4.Location = new System.Drawing.Point(2, 132);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(43, 17);
             this.lbl4.TabIndex = 3;
             this.lbl4.Text = "label4";
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.ForeColor = System.Drawing.Color.Red;
+            this.lbl5.Location = new System.Drawing.Point(2, 170);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(43, 17);
+            this.lbl5.TabIndex = 4;
+            this.lbl5.Text = "label5";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 637);
+            this.Controls.Add(this.lbl5);
             this.Controls.Add(this.lbl4);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
@@ -86,6 +98,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "一些方法";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -99,6 +112,7 @@
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl4;
+        private System.Windows.Forms.Label lbl5;
     }
 }
 
