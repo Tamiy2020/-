@@ -49,7 +49,7 @@ namespace 正则表达式
                 lbl_Tips.Text = "请输入纯数字密码";
                 return;
             }
-            lbl_Tips.Text =string.Empty;
+            lbl_Tips.Text = string.Empty;
         }
 
         /// <summary>
