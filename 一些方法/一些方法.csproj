@@ -87,6 +87,10 @@
     <None Include="Resources\Teach.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\关 闭.png" />
+    <None Include="Resources\最大化 %281%29.png" />
+    <None Include="Resources\最大化.png" />
+    <None Include="Resources\Teach.png" />
     <Content Include="Teach.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

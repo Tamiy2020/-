@@ -61,12 +61,42 @@ namespace 一些方法.Properties {
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Icon Teach {
+        internal static System.Drawing.Bitmap Teach {
             get {
                 object obj = ResourceManager.GetObject("Teach", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 关_闭 {
+            get {
+                object obj = ResourceManager.GetObject("关_闭", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 最大化 {
+            get {
+                object obj = ResourceManager.GetObject("最大化", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 最大化__1_ {
+            get {
+                object obj = ResourceManager.GetObject("最大化__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
