@@ -79,6 +79,7 @@ namespace 一些方法
             Environment.Exit(0);   //这是最彻底的退出方式，不管什么线程都被强制退出，把程序结束的很干净，退出时有可能会抛出异常;
 
             #region 程序退出
+            Process.GetCurrentProcess().Kill();
             Process tt = Process.GetProcessById(Process.GetCurrentProcess().Id);
             tt.Kill();//直接杀死与本程序相关的所有进程，有可能会导致数据丢失，但是不会抛出异常。 
             #endregion
