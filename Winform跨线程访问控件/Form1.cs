@@ -16,6 +16,7 @@ namespace Winform跨线程访问控件
         Thread t;
         int i = 0;
         private delegate void Agent();//②委托代理
+        private ManualResetEvent manualReset = new ManualResetEvent(true);//线程状态对象，关键。
         public Form1()
         {
             InitializeComponent();
@@ -113,6 +114,79 @@ namespace Winform跨线程访问控件
                 t?.Abort();//中止线程
             }
             catch (Exception) { }
+        }
+
+        //-----------------------------------------------------------------------------------------------
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                MessageBox.Show("用户取消了操作");
+            }
+            else
+            {
+                MessageBox.Show("正常完成了操作");
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                if (backgroundWorker1.CancellationPending)//如果用户申请取消
+                {
+                    for (int k = i; k >= 0; k--)
+                    {
+                        Thread.Sleep(100);
+                        backgroundWorker1.ReportProgress(k);//模拟一个回滚的效果
+                    }
+                    e.Cancel = true;
+                    return;
+                }
+                manualReset.WaitOne();//如果ManualResetEvent的初始化为终止状态（true），那么该方法将一直工作，直到收到Reset。反之亦然。
+                Thread.Sleep(200);
+                backgroundWorker1.ReportProgress(i + 1);
+            }
+        }
+
+        private void btn_Run_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                backgroundWorker1.RunWorkerAsync();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btn_Stop_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.CancelAsync();
+        }
+
+        private void btn_Pause_Click(object sender, EventArgs e)
+        {
+            if (btn_Pause.Text == "暂停")
+            {
+                manualReset.Reset();//暂停当前线程的工作，发信号给WaitOne方法，阻塞
+                btn_Pause.Text = "继续";
+            }
+            else
+            {
+                manualReset.Set();//继续某个线程的工作
+                btn_Pause.Text = "暂停";
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+            lbl_Progress.Text = e.ProgressPercentage.ToString()+"%";
         }
     }
 }
