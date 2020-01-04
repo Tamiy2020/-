@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "正则表达式", "正则�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "一些方法", "一些方法\一些方法.csproj", "{687BB359-7AF3-4913-94B4-52BD00B219C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winform跨线程访问控件", "Winform跨线程访问控件\Winform跨线程访问控件.csproj", "{3BEC60AB-F929-4C22-BBA4-CC38F0D2500B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{687BB359-7AF3-4913-94B4-52BD00B219C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{687BB359-7AF3-4913-94B4-52BD00B219C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{687BB359-7AF3-4913-94B4-52BD00B219C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BEC60AB-F929-4C22-BBA4-CC38F0D2500B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEC60AB-F929-4C22-BBA4-CC38F0D2500B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEC60AB-F929-4C22-BBA4-CC38F0D2500B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEC60AB-F929-4C22-BBA4-CC38F0D2500B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
