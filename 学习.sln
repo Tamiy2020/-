@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winform跨线程访问控�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "连接数据库", "连接数据库\连接数据库.csproj", "{ABE891E1-E2AD-447D-A7C9-65CD0F7E0E32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "数据库操作（SQLite）", "数据库操作（SQLite）\数据库操作（SQLite）.csproj", "{DDC9DE3A-09D4-40A9-8AEF-B5DB1A4E8096}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{ABE891E1-E2AD-447D-A7C9-65CD0F7E0E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABE891E1-E2AD-447D-A7C9-65CD0F7E0E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABE891E1-E2AD-447D-A7C9-65CD0F7E0E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDC9DE3A-09D4-40A9-8AEF-B5DB1A4E8096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC9DE3A-09D4-40A9-8AEF-B5DB1A4E8096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC9DE3A-09D4-40A9-8AEF-B5DB1A4E8096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC9DE3A-09D4-40A9-8AEF-B5DB1A4E8096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
